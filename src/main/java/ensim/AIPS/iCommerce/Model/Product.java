@@ -1,16 +1,23 @@
 package ensim.AIPS.iCommerce.Model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class Product {
-    private int id;
+    @Id
+    @GeneratedValue
+    private Long id;
     private String name;
     private String description;
     private int stock;
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -38,10 +45,11 @@ public class Product {
         this.stock = stock;
     }
 
-    public Product(int id, String name, String description, int stock) {
+    public Product(long id, String name, String description, int stock) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.stock = stock;
     }
+
 }
