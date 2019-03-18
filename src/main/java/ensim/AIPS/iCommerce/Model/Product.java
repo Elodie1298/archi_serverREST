@@ -44,6 +44,10 @@ public class Product {
         this.stock = stock;
     }
 
+    public Product(){
+
+    }
+
     public Product(long id, String name, String description, int stock) {
         this.id = id;
         this.name = name;
