@@ -32,7 +32,7 @@ public class ApiController {
             productRepository.findById(id).get().setName(product.getName());
             productRepository.findById(id).get().setDescription(product.getDescription());
             productRepository.findById(id).get().setStock(product.getStock());
-            return getProduct(id);
+            return productRepository.findById(id).get();
         }
         else {
             return null;
